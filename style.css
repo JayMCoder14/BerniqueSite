@@ -65,6 +65,7 @@ body{
     font-size: 1.2rem;
     font-weight: bold;
     margin-top: 20px;
+     color: #ffffff;
 }
 .frames{
     width: 400px;
@@ -88,6 +89,7 @@ body{
    font-size: 20px;
    font-weight: bold;
    transform: rotateY(180deg);
+     color: #ffffff;
 }
 .frames:nth-child(1)
 {
