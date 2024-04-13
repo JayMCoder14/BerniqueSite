@@ -51,18 +51,15 @@ body{
     color: salmon;
     margin-bottom: 30px;
 }
-.inside {
-    background-color: rgba(79, 205, 255, 0.7); /* Adjust the opacity if needed */
+.inside{
+    background-color: rgba(79, 205, 255, 0.7); /* Adjust the last value (alpha) for opacity */
     box-shadow: inset 0 5px 10px rgba(0, 0, 0, 0.5);
     transform: rotateY(180deg);
 }
-
 .inside h3{
     font-size: 1.2rem;
     font-weight: bold;
     margin-top: 20px;
-}
-    
 }
 .frames{
     width: 400px;
