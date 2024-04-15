@@ -1,144 +1,112 @@
 @import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital@1&display=swap');
-
-* {
+*{
     padding: 0;
     margin: 0;
     font-family: 'Bodoni Moda', serif;
 }
-
-body {
+body{
     height: 100vh;
-    background: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(birthday_background4.gif);
+    background: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url(birthday_background4.gif);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
 }
-
-.container {
+.container{
     perspective: 1000px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
 }
-
-.card {
+.card{
     width: 320px;
     height: 400px;
-    position: relative; /* Change to relative */
-    margin-right: 20px; /* Adjust margin for spacing */
+    position: absolute;
+    top: 100px;
+    left: 230px;
     transition: 2s;
     transform-style: preserve-3d;
 }
-
-.card:hover {
+.card:hover{
     transform: rotateY(180deg);
 }
-
-.block {
-    position: relative; /* Change to relative */
+.block{
+    position: absolute;
+    top:200px;
+    right: 600px;
     perspective: 800px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
 }
-
-.outside,
-.inside {
+.outside,.inside{
     width: 100%;
     height: 100%;
     border-radius: 20px;
     text-align: center;
     padding: 1.5rem;
 }
-
-.outside {
+.outside{
     background-color: blanchedalmond;
     box-shadow: inset 0 5px 10px rgba(0,0,0,0.5);
     position: absolute;
     backface-visibility: hidden;
 }
-
-.outside h1 {
+.outside h1{
     font-size: 3rem;
     font-weight: bold;
     color: salmon;
     margin-bottom: 30px;
 }
-
-.inside {
+.inside{
     background: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url(birthday_background2.gif);
     background-color: rgba(79, 205, 255, 0.7); /* Adjust the last value (alpha) for opacity */
     box-shadow: inset 0 5px 10px rgba(0, 0, 0, 0.5);
     transform: rotateY(180deg);
 }
-
 .inside img {
     max-width: 75%; /* Ensure the image doesn't overflow */
     max-height: 50%; /* Adjust the maximum height of the image */
 }
-
-.inside h3 {
+.inside h3{
     font-size: 1.2rem;
     font-weight: bold;
     margin-top: 20px;
-    color: #ffffff;
+     color: #ffffff;
 }
-
-.frames {
-    width: 90%; /* Adjust width for responsiveness */
-    max-width: 400px; /* Add max-width for larger screens */
-    height: auto; /* Adjust height for responsiveness */
+.frames{
+    width: 400px;
+    height: 150px;
     box-shadow: 0 5px 10px rgba(255, 255, 255, 0.5);
     display: flex;
     align-items: center;
     justify-content: space-around;
     padding: 0 0.8rem;
-    margin-bottom: 20px; /* Add margin between frames */
 
-    position: relative;
+    transform: rotateY(-200deg) rotateX(20deg);
+    position: absolute;
 }
-
-.frames img {
+.frames img{
     width: 125px;
     height: 125px;
     border-radius: 50%;
     box-shadow: 0 5px 10px rgba(0,0,0,0.5);
 }
-
-.frames p {
-    font-size: 20px;
-    font-weight: bold;
-    transform: rotateY(180deg);
-    color: #ffffff;
+.frames p{
+   font-size: 20px;
+   font-weight: bold;
+   transform: rotateY(180deg);
+     color: #ffffff;
 }
-
-.frames:nth-child(1) {
+.frames:nth-child(1)
+{
+    top:-110px;
+    z-index: -1;
     background: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url(birthday_background2.gif);
 }
-
-.frames:nth-child(2) {
+.frames:nth-child(2){
     background: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url(birthday_background2.gif);
 }
-
-.frames:nth-child(3) {
+.frames:nth-child(3)
+{
+    top:100px;
     background: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url(birthday_background2.gif);
 }
-
-.frames:nth-child(4) {
+.frames:nth-child(4)
+{
+    top:200px;
     background: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url(birthday_background2.gif);
-}
-
-@media only screen and (min-width: 768px) {
-    .container {
-        flex-direction: row;
-    }
-
-    .card {
-        margin-right: 40px; /* Adjust margin for spacing */
-    }
-
-    .block {
-        align-items: flex-start;
-    }
 }
